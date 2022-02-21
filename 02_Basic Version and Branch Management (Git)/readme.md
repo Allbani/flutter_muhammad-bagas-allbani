@@ -1,1 +1,1 @@
-Apa itu git ?
+<p align="justify"> Apa itu git ? <p>
