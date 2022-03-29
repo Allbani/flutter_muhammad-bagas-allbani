@@ -114,7 +114,7 @@ class ContacPage extends StatelessWidget {
         onPressed: (){
           Navigator.push(
             context, MaterialPageRoute(
-              builder: (context) => const NewContac()
+              builder: (context) => const NewContact()
             ),
           );
         },
