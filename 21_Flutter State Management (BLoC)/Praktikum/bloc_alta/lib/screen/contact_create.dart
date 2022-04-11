@@ -16,6 +16,9 @@ class _ContactCreateState extends State<ContactCreate> {
   String name = '';
   String number = '';
 
+  final nameController = TextEditingController();
+  final numberController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,10 +31,12 @@ class _ContactCreateState extends State<ContactCreate> {
         child: Column(
           children: [
             TextFormField(
+              controller: nameController,
               decoration: const InputDecoration(
                   border: OutlineInputBorder(), hintText: 'Name'),
             ),
             TextFormField(
+              controller: numberController,
               decoration: const InputDecoration(
                   border: OutlineInputBorder(), hintText: 'Number'),
             ),
@@ -40,8 +45,14 @@ class _ContactCreateState extends State<ContactCreate> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  BlocProvider.of<ContactBloc>(context)
-                      .add(ContactEvent.add(ContactData(name, number)));
+                  context.read<ContactBloc>().add(
+                        ContactEvent(
+                          ContactData(
+                            nameController.text,
+                            numberController.text,
+                          ),
+                        ),
+                      );
 
                   Navigator.pushReplacement(
                       context,
