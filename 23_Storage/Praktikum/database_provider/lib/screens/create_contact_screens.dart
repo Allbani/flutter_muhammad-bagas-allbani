@@ -2,7 +2,6 @@ import 'package:database_provider/model/contact_model.dart';
 import 'package:database_provider/model/db_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:uuid/uuid.dart';
 
 class CreateContactScreens extends StatefulWidget {
   final ContactModel? contactModel;
@@ -50,12 +49,10 @@ class _CreateContactScreensState extends State<CreateContactScreens> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                //TITLE
                 const Text('Name'),
                 const SizedBox(
                   height: 5,
                 ),
-                //BUILD FORM NAME
                 TextFormField(
                   cursorColor: Colors.black,
                   controller: _contactNameController,
@@ -72,12 +69,10 @@ class _CreateContactScreensState extends State<CreateContactScreens> {
                 const SizedBox(
                   height: 10,
                 ),
-                //TITLE
                 const Text('Number'),
                 const SizedBox(
                   height: 5,
                 ),
-                //BUILD FORM NAME
                 TextFormField(
                   cursorColor: Colors.black,
                   controller: _contactNumberController,

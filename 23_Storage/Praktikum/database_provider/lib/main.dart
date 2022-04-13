@@ -1,5 +1,6 @@
 import 'package:database_provider/model/db_manager.dart';
 import 'package:database_provider/screens/contact_screens.dart';
+import 'package:database_provider/screens/login_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +24,10 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const ContactScreens(),
+        routes: {
+          '/': (context) => const LoginScreen(),
+          '/contactScreen': (context) => const ContactScreens()
+        },
       ),
     );
   }
