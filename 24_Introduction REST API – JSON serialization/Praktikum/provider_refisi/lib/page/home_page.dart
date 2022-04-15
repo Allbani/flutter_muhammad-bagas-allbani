@@ -32,8 +32,8 @@ class _HomePageState extends State<HomePage> {
               itemCount: model!.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text(snapshot.connectionState.name),
-                  subtitle: Text(snapshot.connectionState.name),
+                  title: Text(snapshot.data![index].name),
+                  subtitle: Text(snapshot.data![index].phone),
                 );
               },
             );
