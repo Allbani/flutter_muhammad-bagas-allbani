@@ -1,9 +1,9 @@
 class UserDataModel {
-  int id;
-  String email;
-  String firstName;
-  String lastName;
-  String avatar;
+  final int id;
+  final String email;
+  final String firstName;
+  final String lastName;
+  final String avatar;
   UserDataModel({
     required this.id,
     required this.email,

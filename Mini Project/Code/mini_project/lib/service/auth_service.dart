@@ -4,10 +4,10 @@ import 'package:mini_project/model/login_user_model.dart';
 
 class AuthService {
   Future<LoginUser?> register(
-    String email,
-    String password,
-    String name,
-    String goal,
+    final String email,
+    final String password,
+    final String name,
+    final String goal,
   ) async {
     try {
       final body = {
@@ -35,8 +35,8 @@ class AuthService {
   }
 
   Future<LoginUser?> login(
-    String email,
-    String password,
+    final String email,
+    final String password,
   ) async {
     try {
       final body = {

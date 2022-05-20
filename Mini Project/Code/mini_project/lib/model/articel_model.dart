@@ -1,14 +1,14 @@
 import 'package:mini_project/model/source_model.dart';
 
 class Articel {
-  Source source;
-  String author;
-  String title;
-  String description;
-  String url;
-  String urlToIlamge;
-  String publishedAt;
-  String content;
+  final Source source;
+  final String author;
+  final String title;
+  final String description;
+  final String url;
+  final String urlToIlamge;
+  final String publishedAt;
+  final String content;
 
   Articel({
     required this.source,
